@@ -9,6 +9,7 @@ h1{
     font-size: 3.5em;
     text-align: center;
     color: rgb(155, 153, 153);
+    width: 100%;
 }
 section#pythonejs{
     display: inline-block;
