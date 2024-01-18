@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronauta</title>
     <style>
-        body{
+        #container{
             background-image: url(imagens/espaco.jpg);
-            background-size: contain;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            height: 96vh;
         }
-        img{
-            display:block;
-            margin: auto;
-            width: 30%;
+        #conteudo{
+            position: absolute;
+            background-image: url(imagens/astronauta.png);
+            background-repeat: no-repeat ;
+            
         }
         
     </style>
 </head>
-<body>
-  <div><img src="imagens/astronauta.png" alt="astronauta"></div>
+<body id="container">
+  <main id="conteudo">
+        
+    
+  </main>
+ 
     
     
 </body>
