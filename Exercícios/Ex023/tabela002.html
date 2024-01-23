@@ -11,6 +11,7 @@
         table{
             width: 600px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
@@ -31,6 +32,14 @@
             font-size: 1.5em;
             font-weight: bold;
             padding: 10px;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: lightblue;
+        }
+        thead > tr> th{
+            position: sticky;
+            top: -1;
+            background-color: grey;
         }
     </style>
 </head>
