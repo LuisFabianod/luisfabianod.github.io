@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* Tablet */
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background-image: linear-gradient()
+    }
+    section#login{
+        width: 80vw;
+        height: 30vh;
+    }
+    section#login > div#imagem{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    section#login > div#form{
+        float: right;
+        width: 70%;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 993px){
+    section#login{
+        width: 950px;
+        height: 38vh;
+    }
+    section#login > div#imagem{
+        float: right;
+        width: 50%;
+        height: 100%;
+
+    }
+    section#login > div#form{
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+}

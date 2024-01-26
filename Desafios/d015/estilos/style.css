@@ -7,6 +7,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 html{
     background-color: var(--cor002);
@@ -30,21 +31,19 @@ section#login{
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+    overflow: hidden;
+    transition: width 0.3s, height 0.3s;
 }
-section#login h1{
-    text-align: center;
-    padding: 10px;
-}
-section#login p{
-    font-size: 0.8em;
-    text-align: center;
-}
+
+
 section#login > div#imagem{
     display: block;
     background-image: url(../imagens/back-login.jpeg);
     height: 200px;
     background-size: cover;
-    border-radius: 20px 20px 0px 0px;
     background-position: left center;
     border: 1px solid #49a09d;
+}
+h1{
+    padding: 10px;
 }
