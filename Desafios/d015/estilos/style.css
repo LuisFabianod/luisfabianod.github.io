@@ -35,7 +35,10 @@ section#login{
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease;
 }
-
+div#form{
+    display: block;
+    padding: 10px;
+}
 
 section#login > div#imagem{
     display: block;
@@ -44,4 +47,12 @@ section#login > div#imagem{
     background-size: cover;
     background-position: left center;
     border: 1px solid #49a09d;
+}
+div#form > h1{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+div#form > p{
+    font-size: 0.8em;
 }
