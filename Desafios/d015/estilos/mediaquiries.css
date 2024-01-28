@@ -17,7 +17,9 @@
         float: right;
         width: 70%;
     }
-    
+    div.campo > input{
+        width: 89%;
+    }
 }
 
 /* PC */
@@ -46,5 +48,8 @@
     div#form > p{
         font-size: 1.2em;
         
+    }
+    div.campo > input{
+        width: 89%;
     }
 }
