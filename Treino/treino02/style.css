@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@font-face {
+    font-family: alexbrush;
+    src: url(fontes/AlexBrush-Regular.ttf);
+
+    
+}
+@font-face {
+    font-family: petit;
+    src: url(fontes/PetitFormalScript-Regular.ttf);
+    
+}
+@font-face {
+    font-family: whisper;
+    src: url(fontes/Whisper-Regular.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#cabeçalho{
+    background-image: url(imagens/chefe-de-cozinha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-attachment: fixed;
+    background-color: grey;
+    height: 700px;
+    box-shadow: inset 0px 0px 10px black;
+
+}
+div > h1#nome{
+    text-align: center;
+    padding: 300px;
+    color: white;
+    font-family: petit;
+    font-size: 6em;
+}
+img{
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 250px;
+}
+main{
+    background-color: brown;
+}
+main > h1{
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356);
+    font-size: 6em;
+    padding: 40px;
+    font-family: whisper;
+}
+main > p{
+    text-indent: 30px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-bottom: 60px; 
+    text-align: center;   
+}
+input{
+    display: block;
+    margin: auto;
+    height: 70px;
+    width: 200px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+input:hover{
+    border: 1px solid black;
+    background-color: rgb(155, 103, 103);
+}
+p{
+    color: white;
+    font-family: whisper;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+    font-size: 2em;
+    width: 600px;
+}
+form{
+    padding-bottom: 20px;
+}
+footer{
+    background-color: black;
+    
+    color: white;
+    height: 40px;
+}
+p#pe{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    
+}
