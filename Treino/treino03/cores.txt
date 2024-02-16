@@ -1,0 +1,10 @@
+#77ffc0 - titulo em cima da imagem
+#2f2841 - para o form
+#00ff88 - h1 do form
+#514869 - input
+#f0ffffde - label
+#f0ffff94 - place holder
+#2b134b - letra do botao
+#00ff88 - bg do botao
+#00ff8052 - box shadow do botao
+

@@ -1,26 +1,31 @@
 @charset "UTF-8";
+
 @font-face {
     font-family: alexbrush;
     src: url(fontes/AlexBrush-Regular.ttf);
 
-    
+
 }
+
 @font-face {
     font-family: petit;
     src: url(fontes/PetitFormalScript-Regular.ttf);
-    
+
 }
+
 @font-face {
     font-family: whisper;
     src: url(fontes/Whisper-Regular.ttf);
 }
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-div#cabeçalho{
-    background-image: url(imagens/chefe-de-cozinha.jpg);
+
+div#cabeçalho {
+    background-image: url(imagens/rest.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
@@ -30,24 +35,29 @@ div#cabeçalho{
     box-shadow: inset 0px 0px 10px black;
 
 }
-div > h1#nome{
+
+h1#nome {
     text-align: center;
     padding: 300px;
     color: white;
     font-family: petit;
     font-size: 6em;
+    text-transform: capitalize;
 }
-img{    
+
+img {
     display: block;
     width: 250px;
-    
+
 }
-main{
+
+main {
     background-color: brown;
     padding-bottom: 80px;
     padding-top: 50px;
 }
-main > h1{
+
+main>h2 {
     text-align: center;
     color: white;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356);
@@ -55,38 +65,46 @@ main > h1{
     padding: 40px;
     font-family: whisper;
 }
-div#bg{
+
+div#bg {
     border-radius: 20px;
     background-color: rgb(224, 157, 157);
     width: 700px;
     margin: auto;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.459);
 }
-div#p{
+
+div#p {
     margin: auto;
     width: 600px;
     padding: 15px;
-    
+
+
 }
-div#p > p{
+
+div#p>p {
     text-indent: 30px;
     font-size: 1.2em;
-    line-height: 1.5em; 
+    line-height: 1.5em;
     text-align: center;
     color: black;
     font-size: 2.4em;
     font-family: whisper;
 }
-section#main2{
+
+section#main2 {
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.541);
 
 }
-h2#tit2{
+
+h2#tit2 {
     font-size: 2.8em;
     text-align: center;
     padding-top: 40px;
-    
+
 }
-input{
+
+input {
     display: block;
     margin: auto;
     height: 70px;
@@ -98,30 +116,36 @@ input{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
     font-weight: bolder;
     cursor: pointer;
-    
+
 }
-input:hover{
+
+input:hover {
     border: 1px solid black;
     background-color: rgb(155, 103, 103);
 }
-form{
+
+form {
     padding-bottom: 20px;
 }
-div.foto{
+
+div.foto {
     padding-bottom: 50px;
     margin: auto;
 
 }
-img.comida{
+
+img.comida {
     border-radius: 10px;
     padding-top: 0px;
     margin: auto;
-    
+
 }
-section#pratos{
+
+section#pratos {
     margin-top: 60px;
 }
-p.bruno{
+
+p.bruno {
     margin: auto;
     font-size: 1.3em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -129,10 +153,12 @@ p.bruno{
     text-align: center;
     padding: 10px;
 }
-div.desc{
+
+div.desc {
     width: 300px;
     margin: auto;
 }
-p.desc{
+
+p.desc {
     text-align: center;
 }
