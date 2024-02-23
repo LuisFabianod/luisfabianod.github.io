@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Jogo da Forca</h1>
+    <img src="imagens/forca0.png" alt="forca" id="img-forca">
+    <div id="palavra"></div>
+    <input type="text" id="entrada-letra" placeholder="CHUTE UMA LETRA" maxlength="1">
+    <button id="btn-chutar" onclick="chutarLetra()">Chutar</button>
+
+    <h2>Letras Chutadas</h2>
+    <div id="letras-chutadas"></div>
+    <div id="mensagem"></div> <br>
+    <button id="btn-reiniciar" onclick="iniciarJogo()">Recomeçar</button>
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>

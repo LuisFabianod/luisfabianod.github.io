@@ -1,0 +1,11 @@
+let n = window.prompt('Digite um número:')
+n = Number(n)
+let h1 = document.getElementById('porra')
+h1.innerHTML += `Seu número é ${n}`
+let res = document.getElementById('res')
+res.innerHTML += `Raiz quadrada : ${n ** 0.5} <br>`
+res.innerHTML += `${n} é inteiro: ${Number.isInteger(n)} <br>`
+res.innerHTML += `${n} é NaN: ${Number.isNaN(n)} <br>`
+res.innerHTML += `Arredondado para cima: ${Math.ceil(n)} <br>`
+res.innerHTML += `Arredondado para baixo: ${Math.floor(n)} <br>`
+res.innerHTML += `Com duas casas decimais: ${n.toFixed(2)}`

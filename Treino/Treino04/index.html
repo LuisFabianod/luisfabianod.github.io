@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="script" href="script.js">
+</head>
+
+<body>
+    <h1 onmouseenter="coisar()" id="a" style="width: 100px;" onmouseleave="coisar2()">BG</h1>
+</body>
+<script>
+    function coisar() {
+        var res = document.getElementById('a')
+        res.innerHTML = ''
+        res.innerHTML = 'DicionaroGamer'
+
+    }
+    function coisar2() {
+        var res = document.getElementById('a')
+        res.innerHTML = 'BG'
+    }
+</script>
+
+</html>
