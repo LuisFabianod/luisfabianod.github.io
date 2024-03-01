@@ -6,7 +6,7 @@ function calculadora() {
     }
     function capturaEnter() {
         display.addEventListener('keyup', (e) => {
-            if (e.keyCode === 13){
+            if (e.keyCode === 13) {
                 realizaConta()
             }
         })
@@ -51,7 +51,8 @@ function calculadora() {
             display.value = String(conta)
 
         } catch (e) {
-            alert('CONTA INVÁLIDA')
+            display.value = ''
+            display.value = 'ERROR'
             return
         }
     }
