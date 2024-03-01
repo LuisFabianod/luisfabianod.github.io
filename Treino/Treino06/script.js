@@ -44,7 +44,8 @@ function calculadora() {
         try {
             conta = eval(conta)
             if (!conta) {
-                alert('CONTA INVÁLIDA')
+                display.value = ''
+                display.value = 'ERROR'
                 return
             }
             display.value = String(conta)
