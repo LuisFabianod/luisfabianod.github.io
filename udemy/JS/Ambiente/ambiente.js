@@ -1,56 +1,30 @@
-const visor = document.querySelector('.visor');
-const listaDeNumeros = [];
-
-document.addEventListener('click', (e) => {
-    const el = e.target;
-
-    if (el.classList.contains('btn-num')) {
-        visor.value += el.innerText;
-    } else if (el.classList.contains('btn-soma')) {
-        operar('somar');
-    } else if (el.classList.contains('btn-dim')) {
-        operar('diminuir');
-    } else if (el.classList.contains('btn-multi')) {
-        operar('multiplicar');
-    } else if (el.classList.contains('btn-div')) {
-        operar('dividir');
-    } else if (el.classList.contains('btn-clear')) {
-        clear();
-    } else if (el.classList.contains('btn-eq')) {
-        calcularResultado();
-    }
-});
-
-function operar(operador) {
-    listaDeNumeros.push(Number(visor.value));
-    listaDeNumeros.push(operador);
-    visor.value = '';
+function Produto(nome, preco) {
+    this.nome = nome
+    this.preco = preco
 }
-
-function clear() {
-    visor.value = '';
-    listaDeNumeros.length = 0;
+Produto.prototype.aumento = function(percentual) {
+    this.preco = this.preco + (this.preco * percentual / 100)
 }
-
-function calcularResultado() {
-    listaDeNumeros.push(Number(visor.value));
-    let resultado = listaDeNumeros[0];
-
-    for (let i = 1; i < listaDeNumeros.length; i += 2) {
-        const operador = listaDeNumeros[i];
-        const numero = listaDeNumeros[i + 1];
-
-        if (operador === 'somar') {
-            resultado += numero;
-        } else if (operador === 'diminuir') {
-            resultado -= numero;
-        } else if (operador === 'multiplicar') {
-            resultado *= numero;
-        } else if (operador === 'dividir') {
-            resultado /= numero;
-        }
-    }
-
-    visor.value = resultado;
-    listaDeNumeros.length = 0;
+Produto.prototype.desconto = function(percentual) {
+    this.preco = this.preco - ( this.preco * percentual / 100)
 }
+function Camiseta(nome, preco, cor) {
+    Produto.call(this, nome, preco)
+    this.cor = cor
+
+}
+Camiseta.prototype = Object.create(Produto.prototype)
+Camiseta.prototype.constructor = Camiseta
+
+function Caneca(nome, preco, material){
+    Produto.call(this, nome, preco)
+    this.material = material
+}
+Caneca.prototype = Object.create(Produto.prototype)
+Caneca.prototype.constructor = Caneca
+
+const camiseta = new Camiseta('Regata', 7.5, 'Preta')
+const caneca = new Caneca ('Caneca', 15, 'Porcelana')
+
+console.log(camiseta)
+console.log(caneca)
