@@ -18,13 +18,16 @@ function validaCPF() {
             })
         },
         criaBotao() {
-            const reinicia = document.createElement('button')
-            reinicia.classList.add('reinicia')
-            reinicia.innerText = 'Reinicia'
-            reinicia.addEventListener('click', () => {
-                window.location.reload() // Recarrega a página
-            })
-            this.botoes.appendChild(reinicia)
+            if (!this.botoes.classList.contains('tala')) {
+                const reinicia = document.createElement('button')
+                reinicia.classList.add('reinicia')
+                reinicia.innerText = 'Reinicia'
+                reinicia.addEventListener('click', () => {
+                    window.location.reload() // Recarrega a página
+                })
+                this.botoes.appendChild(reinicia)
+                this.botoes.classList.add('tala')
+            }
         },
         validaLength() {
             this.cpfLimpo = this.CPF.value.replace(/\D+/g, '')
