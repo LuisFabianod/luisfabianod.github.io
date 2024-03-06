@@ -10,7 +10,7 @@ body {
     text-align: left;
     height: 100vh;
     background-repeat: no-repeat;
-    background-attachment: cover;
+    background-attachment: scroll;
 }
 
 .center {
