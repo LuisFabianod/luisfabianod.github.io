@@ -14,6 +14,7 @@ function validaCPF() {
                 const el = e.target
                 if (el.classList.contains('btn')) {
                     this.validaLength()
+                    this.verificaSequencia()
                 }
             })
         },
@@ -38,6 +39,13 @@ function validaCPF() {
                 return
             }
             this.funcArrayCPF()
+        },
+        verificaSequencia() {
+            if (this.isSequencia) {
+                this.res.innerHTML = 'CPF Inválido'
+                this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+                this.criaBotao()
+            }
         },
         funcArrayCPF() {
             let arrayCPFLocal = []
@@ -106,6 +114,14 @@ function validaCPF() {
             this.res.innerHTML = 'CPF válido!'
             this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
             this.criaBotao()
+        },
+        isSequencia() {
+            const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
+            if (sequencia === cpfLimpo) {
+                return true
+            } else {
+                return false
+            }
         }
     }
 }
