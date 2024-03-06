@@ -41,7 +41,7 @@ function validaCPF() {
             this.funcArrayCPF()
         },
         verificaSequencia() {
-            if (this.isSequencia) {
+            if (this.isSequencia()) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
                 this.criaBotao()
