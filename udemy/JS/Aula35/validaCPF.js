@@ -3,6 +3,7 @@ function validaCPF() {
         arrayCPF: [],
         CPF: document.querySelector('#validaCPF'),
         res: document.querySelector('.res'),
+        botoes: document.querySelector('.botoes'),
         cpfLimpo: '',
 
         inicia() {
@@ -13,11 +14,21 @@ function validaCPF() {
                 }
             })
         },
+        criaBotao(){
+            const reinicia = document.createElement('button')
+            reinicia.classList.add('reinicia')
+            reinicia.innerText = 'Reinicia'
+            reinicia.addEventListener('click', () => {
+                window.location.reload() // Recarrega a página
+            })
+            this.botoes.appendChild(reinicia)
+        },
         validaLength() {
             this.cpfLimpo = this.CPF.value.replace(/\D+/g, '')
             if (this.cpfLimpo.length !== 11) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+                this.criaBotao()
                 return
             }
             this.funcArrayCPF()
@@ -54,6 +65,7 @@ function validaCPF() {
             if (primeiroDigito !== parseInt(this.cpfLimpo[9])) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+                this.criaBotao()
                 return
             }
             this.multiplicaCPF1(this.arrayCPF)
@@ -80,12 +92,14 @@ function validaCPF() {
             }
             if (segundoDigito !== parseInt(this.cpfLimpo[10])) {
                 this.res.innerHTML = 'CPF Inválido'
-                this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+                this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`  
+                this.criaBotao
                 return
 
             }
             this.res.innerHTML = 'CPF válido!'
             this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+            this.criaBotao
         }
     }
 }

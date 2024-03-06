@@ -42,3 +42,9 @@ button:hover {
 .res {
     text-align: center;
 }
+.reinicia{
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
