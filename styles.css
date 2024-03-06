@@ -2,4 +2,14 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to right, purple, rgba(0, 0, 0, 0.651));
+    color: white;
+
+}
+
+h1 {
+    display: none;
+}
+
+hr {
+    display: none;
 }
