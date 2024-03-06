@@ -31,3 +31,15 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+img {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 150px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+img:hover {
+    border: 1px solid white;
+}
