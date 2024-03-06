@@ -22,7 +22,7 @@ function validaCPF() {
             if (!this.botoes.classList.contains('tala')) {
                 const reinicia = document.createElement('button')
                 reinicia.classList.add('reinicia')
-                reinicia.innerText = 'Reinicia'
+                reinicia.innerText = 'Reiniciar'
                 reinicia.addEventListener('click', () => {
                     window.location.reload() // Recarrega a página
                 })
