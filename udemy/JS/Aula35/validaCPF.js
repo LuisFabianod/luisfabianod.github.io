@@ -3,6 +3,7 @@ function validaCPF() {
         arrayCPF: [],
         CPF: document.querySelector('#validaCPF'),
         res: document.querySelector('.res'),
+        cpfLimpo: '',
 
         inicia() {
             document.addEventListener('click', (e) => {
@@ -13,7 +14,8 @@ function validaCPF() {
             })
         },
         validaLength() {
-            if (this.CPF.value.length !== 11) {
+            this.cpfLimpo = this.CPF.value.replace(/\D+/g, '')
+            if (this.cpfLimpo.length !== 11) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
                 return
@@ -23,7 +25,7 @@ function validaCPF() {
         funcArrayCPF() {
             let arrayCPFLocal = []
             for (let i = 0; i < 10; i++) {
-                arrayCPFLocal.push(this.CPF.value[i])
+                arrayCPFLocal.push(this.cpfLimpo[i])
             }
             this.arrayCPF = [...arrayCPFLocal]
             arrayCPFLocal.splice(-1, 1)
@@ -49,7 +51,7 @@ function validaCPF() {
             if (primeiroDigito > 9) {
                 primeiroDigito = 0
             }
-            if (primeiroDigito !== parseInt(this.CPF.value[9])) {
+            if (primeiroDigito !== parseInt(this.cpfLimpo[9])) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
                 return
@@ -76,7 +78,7 @@ function validaCPF() {
             if (segundoDigito > 9) {
                 segundoDigito = 0
             }
-            if (segundoDigito !== parseInt(this.CPF.value[10])) {
+            if (segundoDigito !== parseInt(this.cpfLimpo[10])) {
                 this.res.innerHTML = 'CPF Inválido'
                 this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
                 return
