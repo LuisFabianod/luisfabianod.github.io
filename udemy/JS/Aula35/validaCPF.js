@@ -117,7 +117,7 @@ function validaCPF() {
         },
         isSequencia() {
             const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
-            if (sequencia === cpfLimpo) {
+            if (sequencia === this.cpfLimpo) {
                 return true
             } else {
                 return false
