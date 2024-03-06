@@ -7,6 +7,9 @@ function validaCPF() {
         cpfLimpo: '',
 
         inicia() {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.CPF.focus()
+            })
             document.addEventListener('click', (e) => {
                 const el = e.target
                 if (el.classList.contains('btn')) {
@@ -14,7 +17,7 @@ function validaCPF() {
                 }
             })
         },
-        criaBotao(){
+        criaBotao() {
             const reinicia = document.createElement('button')
             reinicia.classList.add('reinicia')
             reinicia.innerText = 'Reinicia'
@@ -92,14 +95,14 @@ function validaCPF() {
             }
             if (segundoDigito !== parseInt(this.cpfLimpo[10])) {
                 this.res.innerHTML = 'CPF Inválido'
-                this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`  
-                this.criaBotao
+                this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
+                this.criaBotao()
                 return
 
             }
             this.res.innerHTML = 'CPF válido!'
             this.res.innerHTML += `<br> Recarregue a página para corrigir ou tentar outro`
-            this.criaBotao
+            this.criaBotao()
         }
     }
 }
