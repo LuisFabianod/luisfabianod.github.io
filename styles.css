@@ -3,12 +3,9 @@ body {
     padding: 0;
     background-image: linear-gradient(to right, purple, rgba(0, 0, 0, 0.651));
     color: white;
-
+    text-align: center;
 }
 
-h1 {
-    display: none;
-}
 
 hr {
     display: none;
