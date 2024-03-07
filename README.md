@@ -6,9 +6,9 @@
         <p>Luis Fabiano</p>
         <nav>
         
-                <a href="#"><img src="readme/imagens/youtube.png" alt="" class="icon yt"></a>
-                <a href="#"><img src="readme/imagens/github.png" alt="" class="icon gh"></a>
-                <a href="#"><img src="readme/imagens/instagram.png" alt="" class="icon instagram"></a>
+                <a href="https://www.youtube.com/channel/UC-YEhjDaPYT02k7u39jOm2Q" target="blank"><img src="readme/imagens/youtube.png" alt="" class="icon yt"></a>
+                <a href="https://github.com/LuisFabianod" target="blank"><img src="readme/imagens/github.png" alt="" class="icon gh"></a>
+                <a href="https://www.instagram.com/luisfabianocl/" target="blank"><img src="readme/imagens/instagram.png" alt="" class="icon instagram"></a>
             
         </nav>
     </header>
