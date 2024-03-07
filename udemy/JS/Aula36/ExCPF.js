@@ -34,15 +34,15 @@ ValidaCPF.prototype.criaDigito = function (cpfParcial) {
 
 
 }
-ValidaCPF.prototype.isSequencia = function(){
-    const sequencia = thus.cpfLimpo[0].repeat(this.cpfLimpo.length)
+ValidaCPF.prototype.isSequencia = function () {
+    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
     return sequencia === cpfLimpo
 }
 
 
 const cpf = new ValidaCPF('705.484.450-52')
-if(cpf.valida()){
+if (cpf.valida()) {
     console.log('Cpf válido')
-}else{
+} else {
     console.log('Cpf inválido')
 }
