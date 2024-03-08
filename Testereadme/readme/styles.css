@@ -140,7 +140,7 @@ li.terceiro:hover {
     list-style: none;
 }
 
-@media screen and (maxwidth: 768px) {
+@media screen and (minwidth: 768px) {
     main {
         box-sizing: border-box;
         display: block;
