@@ -31,10 +31,16 @@ header>p {
 
 nav {
     display: flex;
+    gap: 5px;
     flex-direction: row;
     margin-right: 30px;
     margin-bottom: 25px;
 
+}
+
+nav:hover {
+    gap: 10px;
+    transition: gap 1s;
 }
 
 nav img {
@@ -42,26 +48,12 @@ nav img {
     margin-left: 5px;
 }
 
-img.yt:hover {
-    width: 22px;
-    height: 22px;
-    transition: width 1s;
-    transition: height 1s;
-}
 
-img.gh:hover {
-    width: 22px;
-    height: 22px;
-    transition: width .5s;
-    transition: height .5s;
-}
+img.yt:hover {}
 
-img.instagram:hover {
-    width: 22px;
-    height: 22px;
-    transition: width 1s;
-    transition: height 1s;
-}
+img.gh:hover {}
+
+img.instagram:hover {}
 
 img.icon {
     height: 20px;
