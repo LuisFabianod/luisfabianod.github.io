@@ -97,3 +97,16 @@ button:hover {
     background-color: rgb(3, 150, 3);
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .contagem {
+        height: 100px;
+        width: 100%;
+        color: white;
+        font-size: 1em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+
+    }
+}
