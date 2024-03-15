@@ -130,8 +130,6 @@ li.terceiro:hover {
     transform: translate(5px);
     transition: transform 1s;
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.384);
-
-
 }
 
 
@@ -140,7 +138,8 @@ li.terceiro:hover {
     list-style: none;
 }
 
-@media screen and (minwidth: 768px) {
+@media screen and (max-width: 768px) {
+    /* Estilos para telas maiores ou iguais a 768px de largura */
     main {
         box-sizing: border-box;
         display: block;
