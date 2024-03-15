@@ -4,6 +4,8 @@ class CorridaCarro {
         this.blueCar = document.querySelector('.blue-car');
         this.redCar = document.querySelector('.red-car');
         this.pista = document.querySelector('.pista');
+        this.divcontagem = document.querySelector('.contagem');
+        this.form = document.querySelector('.form')
         document.addEventListener('click', e => {
             const el = e.target;
             if (el.classList.contains('start')) {
@@ -18,6 +20,9 @@ class CorridaCarro {
             if (el.classList.contains('choose-red')) {
                 e.preventDefault();
                 this.carroEscolhido = 'vermelho';
+            }
+            if (el.classList.contains('reinicia')) {
+                window.location.reload
             }
         });
     }
@@ -38,15 +43,14 @@ class CorridaCarro {
     }
 
     contagem(segundos) {
-        const divcontagem = document.querySelector('.contagem');
         let i = segundos;
         const intervalo = setInterval(() => {
             if (i <= 0) {
                 clearInterval(intervalo);
-                divcontagem.innerHTML = 'COMEÇA';
+                this.divcontagem.innerHTML = 'COMEÇA';
                 return;
             }
-            divcontagem.innerHTML = `${i}`;
+            this.divcontagem.innerHTML = `${i}`;
             i--;
         }, 1000);
     }
@@ -61,17 +65,22 @@ class CorridaCarro {
                 this.redCar.style.marginLeft = `${redCarLeft + this.rand()}px`;
             } else {
                 clearInterval(intervalo);
-                if (blueCarLeft === max) {
-                    this.finalCorrida('azul')
-                } else if (redCarLeft === max) {
-                    this.finalCorrida('vermelho')
+                if (blueCarLeft >= max) {
+                    this.finalCorrida('CARRO AZUL')
+                }
+                if (redCarLeft >= max) {
+                    this.finalCorrida('CARRO VERMELHO')
                 }
                 return;
             }
         }, 100);
     }
     finalCorrida(carro) {
-        alert(`${carro} VENCEU`)
+        this.divcontagem.innerText = `${carro} VENCEU`
+        const botaoReinicia = document.createElement('button')
+        botaoReinicia.innerText = 'Reiniciar'
+        botaoReinicia.classList.add('reinicia')
+        this.form.appendChild(botaoReinicia)
     }
 }
 
