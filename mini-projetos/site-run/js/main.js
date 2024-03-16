@@ -4,9 +4,10 @@ class CorridaCarro {
         this.blueCar = document.querySelector('.blue-car');
         this.redCar = document.querySelector('.red-car');
         this.pista = document.querySelector('.pista');
-        this.divcontagem = document.querySelector('.contagem');
+        this.divsemaforo = document.querySelector('.semaforo');
         this.form = document.querySelector('.form')
         this.torcedor = document.querySelector('.torcida')
+        this.divtexto = document.querySelector('.texto')
         document.addEventListener('click', e => {
             const el = e.target;
             if (el.classList.contains('start')) {
@@ -44,8 +45,8 @@ class CorridaCarro {
     }
 
     iniciarCorrida() {
+        this.ligarSemaforo()
         this.desativarTorcida()
-        this.criaP();
         setTimeout(() => {
             this.moveCarros();
         }, 4500);
@@ -56,22 +57,25 @@ class CorridaCarro {
         botaoTorcidaAzul.disabled = true
         botaoTorcidaVermelho.disabled = true
     }
-    criaP() {
-        this.contagem(3);
+
+    ligarSemaforo() {
+        const vermelho = document.querySelector('.sem-vermelho')
+        const amarelo = document.querySelector('.sem-amarelo')
+        const verde = document.querySelector('.sem-verde')
+        this.divsemaforo.style.display = 'flex'
+        setTimeout(() => {
+            vermelho.style.background = 'red'
+        }, 1000)
+        setTimeout(() => {
+            vermelho.style.background = 'rgb(59, 21, 21)'
+            amarelo.style.background = 'yellow'
+        }, 2000)
+        setTimeout(() => {
+            amarelo.style.background = 'rgb(85, 85, 23)'
+            verde.style.background = 'rgb(61, 245, 51)'
+        }, 3500)
     }
 
-    contagem(segundos) {
-        let i = segundos;
-        const intervalo = setInterval(() => {
-            if (i <= 0) {
-                clearInterval(intervalo);
-                this.divcontagem.innerHTML = 'COMEÇA';
-                return;
-            }
-            this.divcontagem.innerHTML = `${i}`;
-            i--;
-        }, 1000);
-    }
 
     moveCarros() {
         const max = this.pista.offsetWidth - this.blueCar.offsetWidth;
@@ -99,7 +103,8 @@ class CorridaCarro {
         return Math.floor(Math.random() * 10) + 1;
     }
     finalCorrida(carro) {
-        this.divcontagem.innerText = `${carro} VENCEU`
+        this.divsemaforo.style.display = 'none'
+        this.divtexto.innerText = `${carro} VENCEU 🎉`
         const botaoReinicia = document.createElement('button')
         botaoReinicia.innerText = 'Reiniciar'
         botaoReinicia.classList.add('reinicia')
@@ -109,21 +114,21 @@ class CorridaCarro {
         const emoji = "😂"
         if (ganhador === 'azul') {
             if (this.carroEscolhido === 'azul') {
-                this.divcontagem.innerHTML += `<br> O motorista azul agradeçe sua torcida!`
+                this.divtexto.innerHTML += `<br> O motorista azul agradeçe sua torcida! 👍`
                 return
             }
             if (this.carroEscolhido === 'vermelho') {
-                this.divcontagem.innerHTML += `<br> o motorista azul riu da sua cara! ${emoji}`
+                this.divtexto.innerHTML += `<br> o motorista azul riu da sua cara! ${emoji}`
                 return
             }
         }
         if (ganhador === 'vermelho') {
             if (this.carroEscolhido === 'azul') {
-                this.divcontagem.innerHTML += `<br> o motorista vermelho riu da sua cara! ${emoji}`
+                this.divtexto.innerHTML += `<br> o motorista vermelho riu da sua cara! ${emoji}`
                 return
             }
             if (this.carroEscolhido === 'vermelho') {
-                this.divcontagem.innerHTML += `<br> O motorista vermelho agradeçe sua torcida!`
+                this.divtexto.innerHTML += `<br> O motorista vermelho agradeçe sua torcida! 👍`
                 return
             }
         }
