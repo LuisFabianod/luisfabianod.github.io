@@ -96,6 +96,7 @@ h1:hover {
     transform-origin: font-size 1s;
 }
 
+
 .center ul {
     text-align: center;
 }
@@ -122,8 +123,8 @@ li.primeiro:hover,
 li.segundo:hover,
 li.terceiro:hover,
 li.quarto:hover {
-    margin-left: 20px;
-    transition: margin-left .5s;
+    font-size: 1.05em;
+    transition: font-size 1s;
 }
 
 .center img {
@@ -135,9 +136,8 @@ li.quarto:hover {
 }
 
 .center img:hover {
-    transform: translate(5px);
-    transition: transform 1s;
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.384);
+    transition: box-shadow 1s;
 }
 
 
@@ -147,10 +147,11 @@ li.quarto:hover {
 }
 
 @media screen and (max-width: 768px) {
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
+
     main {
         box-sizing: border-box;
         display: block;

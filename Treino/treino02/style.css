@@ -1,16 +1,13 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: alexbrush;
-    src: url(fontes/AlexBrush-Regular.ttf);
-
-
+    font-family: petit;
+    src: url(fontes/PetitFormalScript-Regular.ttf);
 }
 
 @font-face {
-    font-family: petit;
-    src: url(fontes/PetitFormalScript-Regular.ttf);
-
+    font-family: alexbrush;
+    src: url(fontes/AlexBrush-Regular.ttf);
 }
 
 @font-face {
@@ -18,10 +15,47 @@
     src: url(fontes/Whisper-Regular.ttf);
 }
 
+@font-face {
+    font-family: querias;
+    src: url(fontes/Questrial-Regular.ttf);
+}
+
 * {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    font-family: querias, sans-serif;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+
+}
+
+header p {
+    margin-left: 20px;
+    font-family: querias, sans-serif;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+header li {
+    font-family: querias, sans-serif;
+    color: white;
 }
 
 div#cabeçalho {
@@ -33,7 +67,7 @@ div#cabeçalho {
     background-attachment: fixed;
     background-color: grey;
     height: 100vh;
-    box-shadow: inset 0px 0px 10px black;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.651);
     justify-content: center;
     align-items: center;
 
@@ -103,6 +137,7 @@ h2#tit2 {
     font-size: 2.8em;
     text-align: center;
     padding-top: 40px;
+    font-variant: small-caps;
 
 }
 
