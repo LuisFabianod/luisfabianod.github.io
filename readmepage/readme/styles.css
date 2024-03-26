@@ -25,12 +25,36 @@ header {
 
 }
 
-header>p {
+.name {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.3em;
     font-weight: 500;
     padding-left: 30px;
     margin-bottom: 25px;
+}
+
+.darkmodeicon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 25px;
+}
+
+.sunmodeicon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 25px;
+}
+
+.darkmodeicon:hover,
+.sunmodeicon:hover {
+    cursor: pointer;
 }
 
 nav {
@@ -50,6 +74,12 @@ nav:hover {
 nav img {
     margin-right: 5px;
     margin-left: 5px;
+    padding: 4px;
+}
+
+.icondark {
+    background-color: white;
+    border-radius: 5px;
 }
 
 img.icon {
@@ -116,7 +146,6 @@ li.terceiro,
 li.quarto {
     text-align: center;
     list-style: none;
-    color: black
 }
 
 li.primeiro:hover,
