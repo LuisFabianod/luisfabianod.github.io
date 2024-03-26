@@ -6,6 +6,7 @@ class DarkMode {
         this.body = document.querySelector('#body')
         this.a = document.querySelectorAll('.a')
         this.img = document.querySelectorAll('.icondark')
+        this.html = document.querySelector('#html')
     }
 
     trocaIcon() {
@@ -31,6 +32,7 @@ class DarkMode {
         this.body.style.color = 'white';
         this.header.style.background = 'rgb(19, 19, 19)';
         this.main.style.background = 'rgb(7, 7, 7)';
+        this.html.style.background = 'rgb(7, 7, 7)'
         for (let element of this.a) {
             element.style.color = 'white';
         }
@@ -40,6 +42,7 @@ class DarkMode {
         this.body.style.color = 'black'
         this.header.style.background = 'white'
         this.main.style.background = 'rgb(218, 243, 255)'
+        this.html.style.background = 'rgb(218, 243, 255)'
         for (let element of this.a) {
             element.style.color = 'black';
         }
