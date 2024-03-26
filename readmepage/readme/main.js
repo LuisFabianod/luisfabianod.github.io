@@ -1,12 +1,7 @@
 class DarkMode {
     constructor() {
         this.icon = document.querySelector('.icon')
-        this.main = document.querySelector('#main')
-        this.header = document.querySelector('#header')
-        this.body = document.querySelector('#body')
-        this.a = document.querySelectorAll('.a')
-        this.img = document.querySelectorAll('.icondark')
-        this.html = document.querySelector('#html')
+        this.linkCSS = document.querySelector('.link')
     }
 
     trocaIcon() {
@@ -29,23 +24,11 @@ class DarkMode {
     }
 
     darkMode() {
-        this.body.style.color = 'white';
-        this.header.style.background = 'rgb(19, 19, 19)';
-        this.main.style.background = 'rgb(7, 7, 7)';
-        this.html.style.background = 'rgb(7, 7, 7)'
-        for (let element of this.a) {
-            element.style.color = 'white';
-        }
+      this.linkCSS.setAttribute('href', 'readme/style-dark.css')
     }
 
     sunMode() {
-        this.body.style.color = 'black'
-        this.header.style.background = 'white'
-        this.main.style.background = 'rgb(218, 243, 255)'
-        this.html.style.background = 'rgb(218, 243, 255)'
-        for (let element of this.a) {
-            element.style.color = 'black';
-        }
+        this.linkCSS.setAttribute('href', 'readme/styles.css')
     }
 }
 const darkMode = new DarkMode();
