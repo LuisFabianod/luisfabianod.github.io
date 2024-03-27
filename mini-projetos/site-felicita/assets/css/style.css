@@ -35,6 +35,10 @@ header {
 
 }
 
+.menu {
+    display: none;
+}
+
 img.logo-felicita {
     margin-top: 7rem;
     width: 20rem;
@@ -42,10 +46,39 @@ img.logo-felicita {
 }
 
 .navigation {
+
+    z-index: 1000;
     display: flex;
     justify-content: center;
     gap: 2rem;
 
+}
+
+.navigation p {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navigation p::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #818173;
+    transition: width 0.3s ease;
+
+}
+
+.navigation p:hover::after {
+
+    width: 100%;
+}
+
+.navigation p:hover {
+    cursor: pointer;
 }
 
 /* CONFIGURÇÕES SEÇÃO DESTAQUE*/
@@ -102,6 +135,10 @@ section.destaque {
     width: 90%;
     max-width: 25rem;
     border-radius: 1rem;
+}
+
+.imagem-destaque:hover {
+    cursor: pointer;
 }
 
 .texto-destaque {
@@ -231,6 +268,31 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4rem;
+    }
+
+    .imagem-menu {
+        cursor: pointer;
+        height: 5rem;
+        width: 5rem;
+    }
 
     /* SEÇÃO DESTAQUE */
     .destaque {
@@ -286,6 +348,22 @@ footer {
     .preço-destaque {
         color: #f6f0f0;
         font-size: 5rem;
+    }
+
+    .btn-destaque {
+        cursor: pointer;
+        height: 10rem;
+        width: 15rem;
+        border: none;
+        outline: none;
+        background-color: #b3b3a3;
+        color: #f6f0f0;
+        border: 1px solid #cfcbbf;
+        font-family: Raleway, sans-serif;
+    }
+
+    .btn-destaque:hover {
+        background-color: #bebeaf;
     }
 
     /* SEÇÃO SOBRE NÓS */
