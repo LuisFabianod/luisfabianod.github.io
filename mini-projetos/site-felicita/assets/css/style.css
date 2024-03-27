@@ -14,7 +14,7 @@
 }
 
 html {
-    background-color: #d6d5cb;
+    background-color: #f6f0f0;
     color: #818173;
     scrollbar-width: none;
     height: 100vh;
@@ -33,6 +33,12 @@ header {
     height: 6rem;
     font-size: 1.6rem;
 
+}
+
+img.logo-felicita {
+    margin-top: 7rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 .navigation {
@@ -57,8 +63,7 @@ section.destaque {
 
 .destaque {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     margin: auto;
     height: 60rem;
     font-size: 1.6rem;
@@ -66,12 +71,28 @@ section.destaque {
 
 }
 
+#titulo-destaque {
+    justify-content: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 30%;
+    font-size: 3rem;
+}
+
+#destaque {
+    display: flex;
+}
+
+
+
 .img-destaque {
     display: flex;
-    height: 70%;
+    height: 100%;
     width: 50%;
     justify-content: center;
     align-items: center;
+
 
 
 }
@@ -79,30 +100,27 @@ section.destaque {
 .imagem-destaque {
     height: 100%;
     width: 90%;
-    max-width: 31.3rem;
+    max-width: 25rem;
     border-radius: 1rem;
 }
 
 .texto-destaque {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 100%;
     width: 50%;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
+    background-color: #cfcbbf;
+    border-radius: 2rem;
 }
 
-#titulo-destaque {
-    color: white;
-    display: flex;
-    align-items: center;
-    height: 30%;
-}
+
 
 #p-destaque {
-    color: white;
+    color: #818173;
     font-size: 2.5rem;
     display: flex;
     align-items: center;
@@ -111,7 +129,8 @@ section.destaque {
 
 .preço-destaque {
     font-size: 8rem;
-    color: white;
+    color: #818173;
+
     display: flex;
 
     height: 70%;
@@ -123,14 +142,14 @@ section.destaque {
     width: 15rem;
     border: none;
     outline: none;
-    background-color: #bfbdb0;
-    color: rgb(255, 255, 255);
-    border: 1px solid white;
+    background-color: #f6f0f0;
+    color: #8c8b79;
+    border: 1px solid #8c8b79;
     font-family: Raleway, sans-serif;
 }
 
 .btn-destaque:hover {
-    background-color: #cfcbbf;
+    border: 1px solid white;
 }
 
 /* CONFIGURAÇÕES SEÇÃO SOBRE NÓS */
@@ -226,6 +245,11 @@ footer {
 
     }
 
+    #destaque {
+        display: flex;
+        flex-direction: column;
+    }
+
     .img-destaque {
         display: flex;
         height: 60%;
@@ -235,27 +259,32 @@ footer {
 
 
     }
-    .imagem-destaque{
+
+    .imagem-destaque {
+        margin-left: 22rem;
         min-width: 23rem;
         max-height: 36rem;
     }
 
     .texto-destaque {
-        font-size: 3rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        height: 40%;
-        width: 50%;
+        height: 100%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-
-    }
-    .p-destaque{
-        display: none;
+        background-color: transparent;
+        border-radius: 2rem;
     }
 
-    .preço-destaque{
+    .p-destaque {
+        color: #f6f0f0;
+    }
+
+    .preço-destaque {
+        color: #f6f0f0;
         font-size: 5rem;
     }
 
