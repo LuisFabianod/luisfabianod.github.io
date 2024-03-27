@@ -1,0 +1,3 @@
+#8c8b79 - bege escuro
+#bfbdb0 - bege intermediário
+#f6f0f0 - bege claro
