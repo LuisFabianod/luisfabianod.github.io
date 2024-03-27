@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Raleway;
+    src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
+
 * {
 
     margin: 0;
@@ -9,20 +14,21 @@
 }
 
 html {
-    background-color: #8c8b79;
-    color: rgb(238, 233, 218);
+    background-color: #d6d5cb;
+    color: #818173;
     scrollbar-width: none;
     height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Raleway, sans-serif;
 }
 
 /* CONFIGURAÇÕES HEADER */
 header {
     margin-top: 0.7rem;
+    margin-left: 5rem;
     margin-right: 10rem;
     background-color: transparent;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     font-size: 1.6rem;
@@ -38,8 +44,15 @@ header {
 
 /* CONFIGURÇÕES SEÇÃO DESTAQUE*/
 main {
+    margin-top: 10rem;
+}
+
+section.destaque {
+    padding: 4rem;
+    background-color: #8c8b79;
     margin: auto;
     max-width: 70vw;
+    border-radius: 1rem;
 }
 
 .destaque {
@@ -63,6 +76,13 @@ main {
 
 }
 
+.imagem-destaque {
+    height: 100%;
+    width: 90%;
+    max-width: 31.3rem;
+    border-radius: 1rem;
+}
+
 .texto-destaque {
     display: flex;
     flex-direction: column;
@@ -75,15 +95,42 @@ main {
 }
 
 #titulo-destaque {
+    color: white;
     display: flex;
     align-items: center;
     height: 30%;
 }
 
 #p-destaque {
+    color: white;
+    font-size: 2.5rem;
     display: flex;
-    align-items: start;
+    align-items: center;
     height: 70%;
+}
+
+.preço-destaque {
+    font-size: 8rem;
+    color: white;
+    display: flex;
+
+    height: 70%;
+}
+
+.btn-destaque {
+    cursor: pointer;
+    height: 10rem;
+    width: 15rem;
+    border: none;
+    outline: none;
+    background-color: #bfbdb0;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    font-family: Raleway, sans-serif;
+}
+
+.btn-destaque:hover {
+    background-color: #cfcbbf;
 }
 
 /* CONFIGURAÇÕES SEÇÃO SOBRE NÓS */
@@ -169,11 +216,11 @@ footer {
     /* SEÇÃO DESTAQUE */
     .destaque {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: auto;
-        height: 60rem;
+        height: 80rem;
         font-size: 1.6rem;
 
 
@@ -188,8 +235,13 @@ footer {
 
 
     }
+    .imagem-destaque{
+        min-width: 23rem;
+        max-height: 36rem;
+    }
 
     .texto-destaque {
+        font-size: 3rem;
         display: flex;
         flex-direction: column;
         height: 40%;
@@ -198,6 +250,13 @@ footer {
         align-items: center;
         gap: 2rem;
 
+    }
+    .p-destaque{
+        display: none;
+    }
+
+    .preço-destaque{
+        font-size: 5rem;
     }
 
     /* SEÇÃO SOBRE NÓS */
